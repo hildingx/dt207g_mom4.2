@@ -26,10 +26,12 @@
         <main>
             <form id="registerForm">
                 <h2>Skapa ny användare</h2>
-                <input type="text" id="registerUsername" placeholder="Användarnamn" required>
-                <input type="password" id="registerPassword" placeholder="Lösenord" required>
-                <input type="text" id="registerFirstName" placeholder="Förnamn" required>
-                <input type="text" id="registerLastName" placeholder="Efternamn" required>
+                <input type="text" id="username" placeholder="Användarnamn" required>
+                <input type="password" id="password" placeholder="Lösenord" required>
+                <input type="text" id="firstname" placeholder="Förnamn" required>
+                <input type="text" id="lastname" placeholder="Efternamn" required>
+                <div id="formError" class="form-error"></div>
+                <div id="expAdded" class="exp-added"></div>
                 <button type="submit">Registrera</button>
             </form>
         </main>
