@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inloggad</title>
+    <title>Mina Sidor</title>
     <script type="module" src="js/protected.js"></script>
+    <script type="module" src="js/logout.js"></script>
+    <script type="module" src="js/authNavigation.js"></script>
     <link rel="stylesheet" href="css/main.scss">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -13,10 +15,17 @@
 <body>
     <div class="page-container">
         <header>
-            <h1>Autentisering och säkerhet</h1>
+            <ul>
+                <li id="homeLink"><a href="index.html">Startsida</a></li>
+                <li id="loginLink"><a href="login.html">Logga in</a></li>
+                <li id="registerLink"><a href="register.html">Registrera</a></li>
+                <li id="protectedLink"><a href="protected.html" class="current">Mina sidor</a></li>
+            </ul>
         </header>
         <main>
+            <h1>Mina sidor</h1>
             <p>Inloggad</p>
+            <button id="logoutBtn">Logga ut</button>
         </main>
         <footer>
             <p>Alexander Hilding</p>

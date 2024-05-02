@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startsida - Moment 4.2</title>
     <script type="module" src="js/logout.js"></script>
+    <script type="module" src="js/authNavigation.js"></script>
     <link rel="stylesheet" href="css/main.scss">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -15,16 +16,17 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="current">Startsida</a></li>
-                    <li><a href="login.html">Logga in</a></li>
-                    <li><a href="register.html">Registrera</a></li>
+                    <li id="homeLink"><a href="index.html">Startsida</a></li>
+                    <li id="loginLink"><a href="login.html">Logga in</a></li>
+                    <li id="registerLink"><a href="register.html">Registrera</a></li>
+                    <li id="protectedLink"><a href="protected.html">Mina sidor</a></li>
                 </ul>
             </nav>            
         </header>
         <main>
-            <h1>Autentisering och säkerhet</h1>
-            <h2>Logga ut</h2>
-            <button onclick="logOut()">Logga ut</button>
+            <h1>Du är nu utloggad</h1>
+
+            
         </main>
         <footer>
             <p>Alexander Hilding</p>

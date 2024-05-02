@@ -1,5 +1,14 @@
 //Logga ut
-function logOut() {
+/*
+function removeTokenAndSendBack() {
     localStorage.removeItem('authToken');
-    window.location.href = '/login.html';
+    window.location.href = '/index.html';
 }
+*/
+document.addEventListener('DOMContentLoaded', function() {
+    var myButton = document.getElementById('logoutBtn');
+    myButton.addEventListener('click', function() {
+        localStorage.removeItem('authToken');
+        window.location.href = '/index.html';
+    });
+});
