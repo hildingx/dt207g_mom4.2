@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startsida - Moment 4.2</title>
+    <script type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.scss">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1>Autentisering och säkerhet</h1>
+        </header>
+        <main>
+            <div class="form-container">
+                <form id="loginForm">
+                    <h2>Logga in</h2>
+                    <input type="text" id="loginUsername" placeholder="Användarnamn" required>
+                    <input type="password" id="loginPassword" placeholder="Lösenord" required>
+                    <button type="submit">Logga in</button>
+                </form>
+                <form id="registerForm">
+                    <h2>Skapa ny användare</h2>
+                    <input type="text" id="registerUsername" placeholder="Användarnamn" required>
+                    <input type="password" id="registerPassword" placeholder="Lösenord" required>
+                    <input type="text" id="registerFirstName" placeholder="Förnamn" required>
+                    <input type="text" id="registerLastName" placeholder="Efternamn" required>
+                    <button type="submit">Registrera</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>Alexander Hilding</p>
+        </footer>
+    </div>
+</body>
+</html>
