@@ -1,7 +1,6 @@
 {
   "name": "mom4.2",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "start": "parcel serve ./src/index.html ./src/login.html ./src/logout.html ./src/protected.html ./src/register.html",
     "build": "parcel build ./src/index.html ./src/login.html ./src/logout.html ./src/protected.html ./src/register.html"
