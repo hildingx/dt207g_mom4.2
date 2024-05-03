@@ -5,9 +5,9 @@ window.onload = function() {
     }
 }
 
-/*
+
 async function fetchAccountDetails() {
-  const url = 'https://dt207g-mom4-1.onrender.com/api/user';
+  const url = 'https://dt207g-mom4-1.onrender.com/api/userdata';
   const token = localStorage.getItem('authToken');
   try {
       const response = await fetch(url, {
@@ -32,4 +32,3 @@ async function fetchAccountDetails() {
 document.addEventListener('DOMContentLoaded', function() {
   fetchAccountDetails();
 });
-*/
