@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startsida - Moment 4.2</title>
+    <title>Logga in - Moment 4.2</title>
     <script type="module" src="js/login.js"></script>
     <script type="module" src="js/authNavigation.js"></script>
     <link rel="stylesheet" href="css/main.scss">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
     <div class="page-container">
@@ -17,7 +17,7 @@
             <nav>
                 <ul>
                     <li id="homeLink"><a href="index.html">Startsida</a></li>
-                    <li id="loginLink"><a href="login.html" class="current">Logga in</a></li>
+                    <li id="loginLink"><a href="login.html">Logga in</a></li>
                     <li id="registerLink"><a href="register.html">Registrera</a></li>
                     <li id="protectedLink"><a href="protected.html">Mina sidor</a></li>
                 </ul>
@@ -29,7 +29,8 @@
                     <h2>Logga in</h2>
                     <input type="text" id="loginUsername" placeholder="Användarnamn" required>
                     <input type="password" id="loginPassword" placeholder="Lösenord" required>
-                    <button type="submit">Logga in</button>
+                    <div id="loginError" class="login-error"></div>
+                    <button class="button" type="submit">Logga in</button>
                 </form>
             </div>
         </main>

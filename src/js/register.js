@@ -11,12 +11,12 @@ document.getElementById('registerForm').addEventListener('submit', async functio
 
     //Validera input för att kontrollera att inga fält är tomma
     if (!username || !password || !firstname || !lastname) {
-        errorEl.innerHTML = 'Alla fält måste fyllas i. <br> Vänligen kontrollera dina inmatningar.';
+        errorEl.innerHTML = '<i class="fas fa-exclamation-circle"></i> Alla fält måste fyllas i. <br> Vänligen kontrollera dina inmatningar.';
         errorEl.style.display = 'block';
         return;
     }
 
-    //Objekt med insamlad användardata
+    //Skapa objekt med insamlad användardata från regformuläret
     const userData = {
         username: username,
         password: password,
@@ -34,17 +34,18 @@ document.getElementById('registerForm').addEventListener('submit', async functio
         });
         
         if (!response.ok) {
-            errorEl.innerHTML = 'Användare kunde inte läggas till';
+            errorEl.innerHTML = '<i class="fas fa-exclamation-circle"></i> Användare kunde inte läggas till';
             errorEl.style.display = 'block';
         } else {
-            expAddedEl.innerHTML = 'Användare tillagd';
+            expAddedEl.innerHTML = '<i class="fas fa-check"></i> Användare tillagd';
             expAddedEl.style.display = 'block';
+            errorEl.style.display = 'none';
             //Rensa formuläret
             form.reset();
         }
     } catch (error) {
         console.error('Det gick inte att lägga till användare:', error);
-        errorEl.textContent = 'Användare kunde inte läggas till.';
+        errorEl.textContent = '<i class="fas fa-exclamation-circle"></i> Användare kunde inte läggas till. Serverfel.';
         errorEl.style.display = 'block';
     }
 });

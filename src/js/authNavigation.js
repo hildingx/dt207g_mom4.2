@@ -1,3 +1,5 @@
+//Element att visa eller dölja beroende på om användare är inloggad eller ej.
+
 document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('authToken');
     const navLinks = {
@@ -6,14 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
         registerLink: document.getElementById('registerLink'),
         protectedLink: document.getElementById('protectedLink')
     };
+    const logoutButton = document.querySelector('.logout-btn-corner');
 
     if (token) {
         navLinks.loginLink.style.display = 'none';
         navLinks.registerLink.style.display = 'none';
         navLinks.protectedLink.style.display = 'block';
+        logoutButton.style.display = 'block';
+        
     } else {
         navLinks.loginLink.style.display = 'block';
         navLinks.registerLink.style.display = 'block';
         navLinks.protectedLink.style.display = 'none';
+        logoutButton.style.display = 'none';
     }
 });

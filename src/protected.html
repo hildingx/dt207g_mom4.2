@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +10,34 @@
     <link rel="stylesheet" href="css/main.scss">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
     <div class="page-container">
         <header>
-            <ul>
-                <li id="homeLink"><a href="index.html">Startsida</a></li>
-                <li id="loginLink"><a href="login.html">Logga in</a></li>
-                <li id="registerLink"><a href="register.html">Registrera</a></li>
-                <li id="protectedLink"><a href="protected.html" class="current">Mina sidor</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li id="homeLink"><a href="index.html">Startsida</a></li>
+                    <li id="loginLink"><a href="login.html">Logga in</a></li>
+                    <li id="registerLink"><a href="register.html">Registrera</a></li>
+                    <li id="protectedLink"><a href="protected.html" class="current">Mina sidor</a></li>
+                </ul>
+            </nav>
+            <button id="logoutBtnHeader" class="logout-btn-corner"><i class="fas fa-sign-out-alt"></i> Logga ut</button>
         </header>
-        <main>
+        <main id="mainProtected">
             <h1>Mina sidor</h1>
-            <p>Inloggad</p>
+            <!-- Här skrivs hämtad data ut -->
             <div id="accountDetails">
-                
+
             </div>
-            <button id="logoutBtn">Logga ut</button>
+            <p>
+                Här kommer du komma åt din framtida lagrade data.
+                <br>
+                Fram tills dess, njut av den här midjourney-genererade bilden på en cyberpunk-älg:
+            </p>
+            <img src="img/cyberpunk_moose_midjourney.png" alt="En midjourney-genererad bild på en cyberpunk-älg" id="mooseImg">
+            <button id="logoutBtnMain" class="button logoutBtn"><i class="fas fa-sign-out-alt"></i> Logga ut</button>
         </main>
         <footer>
             <p>Alexander Hilding</p>
