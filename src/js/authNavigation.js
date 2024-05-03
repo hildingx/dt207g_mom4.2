@@ -14,12 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.loginLink.style.display = 'none';
         navLinks.registerLink.style.display = 'none';
         navLinks.protectedLink.style.display = 'block';
-        logoutButton.style.display = 'block';
+        if(logoutButton) {
+            logoutButton.style.display = 'block';
+        }
         
     } else {
         navLinks.loginLink.style.display = 'block';
         navLinks.registerLink.style.display = 'block';
         navLinks.protectedLink.style.display = 'none';
-        logoutButton.style.display = 'none';
+        if(logoutButton) {
+            logoutButton.style.display = 'none';
+        }
     }
 });
