@@ -5,6 +5,7 @@ window.onload = function() {
     }
 }
 
+/*
 async function fetchAccountDetails() {
   const url = 'https://dt207g-mom4-1.onrender.com/api/user';
   const token = localStorage.getItem('authToken');
@@ -31,3 +32,4 @@ async function fetchAccountDetails() {
 document.addEventListener('DOMContentLoaded', function() {
   fetchAccountDetails();
 });
+*/
