@@ -9,6 +9,11 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     const expAddedEl = document.getElementById('expAdded');
     const form = document.getElementById('registerForm');
 
+    //Laddningsindikator
+    const loadingIndicatorEl = document.getElementById('loadingIndicator');
+    //Visa laddningsindikator
+    loadingIndicatorEl.style.display = 'block';
+
     //Rensa tidigare felmeddelanden
     errorEl.textContent = '';
     errorEl.style.display = 'none';
@@ -19,6 +24,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     if (!username || !password || !firstname || !lastname) {
         errorEl.innerHTML = '<i class="fas fa-exclamation-circle"></i> Alla fält måste fyllas i. <br> Vänligen kontrollera dina inmatningar.';
         errorEl.style.display = 'block';
+        loadingIndicatorEl.style.display = 'none';
         return;
     }
 
@@ -53,4 +59,5 @@ document.getElementById('registerForm').addEventListener('submit', async functio
         errorEl.textContent = '<i class="fas fa-exclamation-circle"></i> Användare kunde inte läggas till. Serverfel.';
         errorEl.style.display = 'block';
     }
+    loadingIndicatorEl.style.display = 'none';
 });

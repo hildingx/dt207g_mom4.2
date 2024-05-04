@@ -9,6 +9,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     //Element för att visa felmeddelanden
     const errorEl = document.getElementById('loginError');
 
+    //Laddningsindikator
+    const loadingIndicatorEl = document.getElementById('loadingIndicator');
+    //Visa laddningsindikator
+    loadingIndicatorEl.style.display = 'block';
+
     //POST-förfrågan användarnamn och lösenord 
     fetch('https://dt207g-mom4-1.onrender.com/api/login', {
         method: 'POST',
