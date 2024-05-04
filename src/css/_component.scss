@@ -33,6 +33,10 @@
     position: absolute;
     top: 15px;
     right: 10px;
+
+    @media (max-width: 440px) {
+        top: 75px;
+    }
 }
 
 .logout-btn-corner:hover {

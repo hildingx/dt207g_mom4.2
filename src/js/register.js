@@ -9,6 +9,12 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     const expAddedEl = document.getElementById('expAdded');
     const form = document.getElementById('registerForm');
 
+    //Rensa tidigare felmeddelanden
+    errorEl.textContent = '';
+    errorEl.style.display = 'none';
+    expAddedEl.textContent = '';
+    expAddedEl.style.display = 'none';
+
     //Validera input för att kontrollera att inga fält är tomma
     if (!username || !password || !firstname || !lastname) {
         errorEl.innerHTML = '<i class="fas fa-exclamation-circle"></i> Alla fält måste fyllas i. <br> Vänligen kontrollera dina inmatningar.';
@@ -39,7 +45,6 @@ document.getElementById('registerForm').addEventListener('submit', async functio
         } else {
             expAddedEl.innerHTML = '<i class="fas fa-check"></i> Användare tillagd';
             expAddedEl.style.display = 'block';
-            errorEl.style.display = 'none';
             //Rensa formuläret
             form.reset();
         }
