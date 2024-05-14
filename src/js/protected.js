@@ -14,7 +14,7 @@ async function checkToken() {
             }
         });
         if (response.ok) {
-            document.getElementById('protectedPage').classList.remove('hidden');
+            document.body.style.display = 'block';
             fetchAccountDetails();
         } else {
             localStorage.removeItem('authToken');
