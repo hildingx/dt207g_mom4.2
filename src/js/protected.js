@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     checkToken();
-    fetchAccountDetails();
 });
 
 async function checkToken() {
@@ -14,7 +13,10 @@ async function checkToken() {
                 'Authorization': `Bearer ${token}`
             }
         });
-        if (!response.ok) {
+        if (response.ok) {
+            document.getElementById('protectedPage').classList.remove('hidden');
+            fetchAccountDetails();
+        } else {
             localStorage.removeItem('authToken');
             window.location.href = '/login.html';
         }
