@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+    tokenAvail();
     checkToken();
 });
+
+function tokenAvail() {
+    const token = localStorage.getItem('authToken');
+
+    if (!token) {
+        window.location.href = '/login.html';
+    }
+}
 
 async function checkToken() {
     const url = 'https://dt207g-mom4-1.onrender.com/api/protected';
