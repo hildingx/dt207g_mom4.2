@@ -12,6 +12,7 @@ function tokenAvail() {
 }
 
 async function checkToken() {
+    await new Promise(resolve => setTimeout(resolve, 500));
     const url = 'https://dt207g-mom4-1.onrender.com/api/protected';
     const token = localStorage.getItem('authToken');
     try {

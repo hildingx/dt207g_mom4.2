@@ -8,6 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     //Element för att visa felmeddelanden
     const errorEl = document.getElementById('loginError');
+    const form = document.getElementById('loginForm');
 
     //Laddningsindikator
     const loadingIndicatorEl = document.getElementById('loadingIndicator');
@@ -33,14 +34,14 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         } else {
             //Visa felmeddelande
             errorEl.innerHTML = '<i class="fas fa-exclamation-circle"></i> Fel användarnamn eller lösenord';
-            expAddedEl.style.display = 'block';
             form.reset();
+            loadingIndicatorEl.style.display = 'none';
         }
     })
     .catch(error => {
         //Visa felmeddelande
         errorEl.innerHTML = '<i class="fas fa-exclamation-circle"></i> Fel användarnamn eller lösenord';
-            expAddedEl.style.display = 'block';
-            form.reset();
+        form.reset();
+        loadingIndicatorEl.style.display = 'none';
     });
 });
